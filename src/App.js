@@ -21,7 +21,9 @@ class App extends Component {
     })
   }
 
+
   render() {
+    let hello = "hello";
     return (
       <div className="App">
         <header className="App-header">
@@ -31,7 +33,7 @@ class App extends Component {
         <p className="App-intro">
           Choose an effect
         </p>
-        <Canvas />
+        <Canvas text={hello}/>
         {/*<WaterDrop />
         <CircleMotion /> */}
       </div>
