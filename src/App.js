@@ -7,11 +7,9 @@ class App extends Component {
 
   constructor(props){
     super(props)
-
     this.state = {
       effect: 'noEffect'
     }
-
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -20,7 +18,6 @@ class App extends Component {
       effect: event.target.value
     })
   }
-
 
   render() {
     let hello = "hello";
@@ -33,9 +30,12 @@ class App extends Component {
         <p className="App-intro">
           Choose an effect
         </p>
-        <Canvas text={hello}/>
-        {/*<WaterDrop />
-        <CircleMotion /> */}
+        <button onClick={this.handleClick} value="circlemotion"> Circle Motion </button>
+        <button onClick={this.handleClick} value="waterdrop"> Water Drop </button>
+        <button onClick={this.handleClick} value="canvas"> Canvas </button>
+        { this.state.effect === "canvas" && <Canvas/>}
+        { this.state.effect === "circlemotion" &&  <CircleMotion/>}
+        { this.state.effect === "waterdrop" && <WaterDrop />}
       </div>
     );
   }

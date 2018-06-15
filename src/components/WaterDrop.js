@@ -12,7 +12,7 @@ export default class WaterDrop extends Component {
         // start logic
     }
 
-    componentDidUnmount() {
+    componentWillUnmount() {
         // stop logic cycle
     }
 
